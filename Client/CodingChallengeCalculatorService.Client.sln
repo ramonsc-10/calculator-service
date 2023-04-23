@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingChallengeCalculatorService.ConsoleApp", "CodingChallengeCalculatorService.ConsoleApp\CodingChallengeCalculatorService.ConsoleApp.csproj", "{201694CC-A906-4EC0-ADF9-F1BE75955E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingChallengeCalculatorService.RestApi", "CodingChallengeCalculatorService.RestApi\CodingChallengeCalculatorService.RestApi.csproj", "{9034EAAD-18E9-420B-824E-288702AD4138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{201694CC-A906-4EC0-ADF9-F1BE75955E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201694CC-A906-4EC0-ADF9-F1BE75955E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201694CC-A906-4EC0-ADF9-F1BE75955E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201694CC-A906-4EC0-ADF9-F1BE75955E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9034EAAD-18E9-420B-824E-288702AD4138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9034EAAD-18E9-420B-824E-288702AD4138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9034EAAD-18E9-420B-824E-288702AD4138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9034EAAD-18E9-420B-824E-288702AD4138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

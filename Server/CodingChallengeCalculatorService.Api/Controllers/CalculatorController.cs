@@ -20,7 +20,7 @@ namespace CodingChallengeCalculatorService.Api.Controllers
 
         [HttpPost("add")]
         [CalculatorExceptionFilter]
-        public IActionResult Add([FromHeader] string? trackingId, [FromBody] AddRequest request)
+        public IActionResult Add([FromHeader(Name ="X-Evi-Tracking-Id")] string? trackingId, [FromBody] AddRequest request)
         {
             _calculatorService.TrackOperation(trackingId);
 
@@ -41,7 +41,7 @@ namespace CodingChallengeCalculatorService.Api.Controllers
 
         [HttpPost("sub")]
         [CalculatorExceptionFilter]
-        public IActionResult Sub([FromHeader] string? trackingId, [FromBody] SubRequest request)
+        public IActionResult Sub([FromHeader(Name = "X-Evi-Tracking-Id")] string? trackingId, [FromBody] SubRequest request)
         {
             _calculatorService.TrackOperation(trackingId);
 
@@ -62,7 +62,7 @@ namespace CodingChallengeCalculatorService.Api.Controllers
 
         [HttpPost("mult")]
         [CalculatorExceptionFilter]
-        public IActionResult Mult([FromHeader] string? trackingId, [FromBody] MultRequest request)
+        public IActionResult Mult([FromHeader(Name = "X-Evi-Tracking-Id")] string? trackingId, [FromBody] MultRequest request)
         {
             _calculatorService.TrackOperation(trackingId);
 
@@ -83,7 +83,7 @@ namespace CodingChallengeCalculatorService.Api.Controllers
 
         [HttpPost("div")]
         [CalculatorExceptionFilter]
-        public IActionResult Div([FromHeader] string? trackingId, [FromBody] DivRequest request)
+        public IActionResult Div([FromHeader(Name = "X-Evi-Tracking-Id")] string? trackingId, [FromBody] DivRequest request)
         {
             _calculatorService.TrackOperation(trackingId);
 
@@ -104,7 +104,7 @@ namespace CodingChallengeCalculatorService.Api.Controllers
 
         [HttpPost("sqrt")]
         [CalculatorExceptionFilter]
-        public IActionResult Sqrt([FromHeader] string? trackingId, [FromBody] SquareRootRequest request)
+        public IActionResult Sqrt([FromHeader(Name = "X-Evi-Tracking-Id")] string? trackingId, [FromBody] SquareRootRequest request)
         {
             _calculatorService.TrackOperation(trackingId);
 

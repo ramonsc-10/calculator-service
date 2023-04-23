@@ -16,6 +16,7 @@ namespace CodingChallengeCalculatorService.Application.Exception
             : base(message)
         {
             Code = code;
+            StatusCode = statusCode;
         }
 	}
 }
