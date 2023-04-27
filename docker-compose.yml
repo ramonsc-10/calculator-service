@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  api:
+    build:
+      context: ./Server
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - 3450:80
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=1
+    networks:
+      network-api:
+        ipv4_address: 172.16.0.1
+
+  console:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - API_ADDRESS=api:3450
+    ports:
+      - 3451:80
+    depends_on:
+      - api
+    networks:
+      network-api:
+        ipv4_address: 172.16.0.2
+
+networks:
+  network-api:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.16.0.0/24
